@@ -179,6 +179,17 @@ public class GraphViewSeries {
 	}
 
 	/**
+	 *	Change the style and redraw the graph.
+	 *	@param newStyle must be the new style to use.
+	 */
+	public void resetStyle(GraphViewSeriesStyle newStyle) {
+		this.style = newStyle;
+		for(GraphView g : graphViews) {
+			g.redrawAll();
+		}
+	}
+
+	/**
 	 * clears the current data and set the new.
      *
 	 * redraws the graphview(s)
